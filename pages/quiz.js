@@ -18,6 +18,9 @@ function LoadingWidget() {
 }
 
 function QuestionWidget({ question, questionIndex, totalQuestions }) {
+
+    const questionId = `question__${questionIndex}`
+
     return (
         <Widget>
             <Widget.Header>
@@ -29,16 +32,34 @@ function QuestionWidget({ question, questionIndex, totalQuestions }) {
             <Widget.Content>
                 <h2>{question.title}</h2>
                 <p>{question.description}</p>
-                    <Button>Confirmar</Button>      
+                
+                <form>
+                    {question.alternatives.map( (alternative, alternativeIndex) => {
+                        const alternativeId = `alternative__${alternativeIndex}`
+                        
+                        return (
+                            <Widget.Topic htmlFor={alternativeId} as="label">
+                                <input type="radio" name={questionId} id={alternativeId}/>
+                                {alternative}
+                            </Widget.Topic>
+                        )
+                    })}
+                </form>
+
+                <Button>Confirmar</Button>      
             </Widget.Content>
         </Widget>
     )
 }
 
+const screenStates = {
+    QUIZ: 'QUIZ',
+    LOADING: 'LOADING',
+    RESULT: 'RESULT',
+}
 
 const QuizPage = () => {
-    console.log('Questions: ', db.questions)
-
+    const screenState = screenStates.QUIZ
     const totalQuestions = db.questions.length
     const questionIndex = 0
     const question = db.questions[questionIndex]
@@ -46,8 +67,9 @@ const QuizPage = () => {
     return(
         <QuizBackground backgroundImage={db.bg}>
             <QuizContainer>
-                < QuestionWidget question={question} questionIndex={questionIndex} totalQuestions={totalQuestions}/>
-                <LoadingWidget />
+                { screenState === screenStates.QUIZ && <QuestionWidget question={question} questionIndex={questionIndex} totalQuestions={totalQuestions}/>}
+                { screenState === screenStates.LOADING && <LoadingWidget />}
+                { screenState === screenStates.RESULT && <div>Você acertou X questões. Parabéns!</div>}
             </QuizContainer>
             <GitHubCorner projectUrl="https://github.com/castro-gabriel/itachiquiz" />
         </QuizBackground>
