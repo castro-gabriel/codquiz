@@ -8,20 +8,9 @@ import Widget from '../src/components/Widget'
 import Footer from '../src/components/Footer'
 import GitHubCorner from '../src/components/GitHubCorner'
 import QuizBackground from '../src/components/QuizBackground'
+import QuizContainer from '../src/components/QuizContainer'
 import Button from '../src/components/Button'
 import Input from '../src/components/Input'
-
-export const QuizContainer = styled.div`
-  width: 100%;
-  max-width: 350px;
-  padding-top: 45px;
-  margin: auto 10%;
-
-  @media screen and (max-width: 500px){
-    margin: auto;
-    padding: 15px;
-  }
-`
 
 
 export default function Home() {
@@ -69,7 +58,7 @@ export default function Home() {
           
           <Widget.Content>
             <p>
-              Responsa o QUIZ sobre o Itachi Uchiha e vamos ver o que você sabe.<br />
+              Responda o QUIZ sobre o Itachi Uchiha e vamos ver o que você sabe.<br />
               <hr />
               Created by @gabscastro.dev
             </p>
