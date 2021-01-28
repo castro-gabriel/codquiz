@@ -2,6 +2,7 @@ import React from 'react'
 import db from '../db.json'
 
 // Components
+import GlobalContainer from '../src/components/GlobalContainer'
 import Widget from '../src/components/Widget'
 import GitHubCorner from '../src/components/GitHubCorner'
 import QuizBackground from '../src/components/QuizBackground'
@@ -22,33 +23,37 @@ function QuestionWidget({ question, questionIndex, totalQuestions }) {
     const questionId = `question__${questionIndex}`
 
     return (
-        <Widget>
-            <Widget.Header>
-                <h3>{`Pergunta ${questionIndex + 1} de ${totalQuestions}`}</  h3>
-            </Widget.Header>
+        <GlobalContainer>
+            <QuizContainer>
+                <Widget>
+                    <Widget.Header>
+                        <h3>{`Pergunta ${questionIndex + 1} de ${totalQuestions}`}</  h3>
+                    </Widget.Header>
 
-            <img src={question.image} alt="Descrição" style={{ width: '100%', height: '150px', objectFit: 'cover' }}/>
+                    <img src={question.image} alt="Descrição" style={{ width: '100%', height: '150px', objectFit: 'cover' }}/>
 
-            <Widget.Content>
-                <h2>{question.title}</h2>
-                <p>{question.description}</p>
-                
-                <form>
-                    {question.alternatives.map( (alternative, alternativeIndex) => {
-                        const alternativeId = `alternative__${alternativeIndex}`
+                    <Widget.Content>
+                        <h2>{question.title}</h2>
+                        <p>{question.description}</p>
                         
-                        return (
-                            <Widget.Topic htmlFor={alternativeId} as="label">
-                                <input type="radio" name={questionId} id={alternativeId}/>
-                                {alternative}
-                            </Widget.Topic>
-                        )
-                    })}
-                </form>
+                        <form>
+                            {question.alternatives.map( (alternative, alternativeIndex) => {
+                                const alternativeId = `alternative__${alternativeIndex}`
+                                
+                                return (
+                                    <Widget.Topic htmlFor={alternativeId} as="label">
+                                        <input type="radio" name={questionId} id={alternativeId}/>
+                                        {alternative}
+                                    </Widget.Topic>
+                                )
+                            })}
+                        </form>
 
-                <Button>Confirmar</Button>      
-            </Widget.Content>
-        </Widget>
+                        <Button>Confirmar</Button>      
+                    </Widget.Content>
+                </Widget>
+            </QuizContainer>
+        </GlobalContainer>
     )
 }
 

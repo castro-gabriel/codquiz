@@ -1,10 +1,9 @@
 import styled from 'styled-components'
 
 const Widget = styled.div`
-  margin-top: 24px;
   margin-bottom: 24px;
   background-color: ${({ theme }) => theme.colors.darkOpacity};
-  border-radius: 4px;
+  border-radius: 16px;
   overflow: hidden;
   
   h1, h2, h3 {
