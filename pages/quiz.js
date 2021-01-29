@@ -111,7 +111,7 @@ const QuizPage = () => {
 
     return(
         <QuizBackground backgroundImage={db.bg}>
-            <GlobalContainer>
+            {/* <GlobalContainer> */}
                 <QuizContainer>
                     { screenState === screenStates.QUIZ && (
                         <QuestionWidget 
@@ -125,7 +125,7 @@ const QuizPage = () => {
                     { screenState === screenStates.RESULT && <div>Você acertou X questões. Parabéns!</div>}
                 </QuizContainer>
                 <GitHubCorner projectUrl="https://github.com/castro-gabriel/itachiquiz" />
-            </GlobalContainer>
+            {/* </GlobalContainer> */}
         </QuizBackground>
     )
 }

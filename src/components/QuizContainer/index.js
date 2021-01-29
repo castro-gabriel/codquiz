@@ -1,16 +1,15 @@
 import styled from 'styled-components'
 
 const QuizContainer = styled.div`
-  height: 100vh;
+  height: 100%;
   width: 100%;
-  max-width: 500px;
-  margin: 0;
-  /* overflow: hidden; */
+  max-width: 700px;
+  margin: 25px;
   font-size: 15px;
 
-  @media screen and (max-width: 500px){
+  @media screen and (max-width: 800px){
     margin: auto;
-    height: 100vh;
+    height: 90vh;
     padding: 15px;
   }
 `
