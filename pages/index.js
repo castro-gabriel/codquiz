@@ -59,7 +59,7 @@ export default function Home() {
               <p>
                 Responda o QUIZ sobre o Itachi Uchiha e vamos ver o que você sabe.<br />
                 <hr />
-                Created by @gabscastro.dev
+                Created by <a href="https://www.instagram.com/gabscastro.dev/" target="blank">@gabscastro.dev</a>
               </p>
             </Widget.Content>
           

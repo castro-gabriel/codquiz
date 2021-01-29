@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 
 const Widget = styled.div`
-  margin-bottom: 24px;
+  margin-bottom: 10px;
   background-color: ${({ theme }) => theme.colors.darkOpacity};
-  border-radius: 16px;
+  border-radius: 8px;
+  padding: 20px;
   overflow: hidden;
   
   h1, h2, h3 {
@@ -32,6 +33,9 @@ Widget.Content = styled.div`
   ul {
     list-style: none;
     padding: 0;
+  }
+  a {
+    color: #fff;
   }
 `
 

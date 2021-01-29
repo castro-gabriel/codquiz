@@ -6,14 +6,14 @@ const ButtonBase = styled.button`
     width: 100%;
     border: none;
     border-radius: 5px;
-    background-color: ${db.theme.colors.darkColor};
+    background-color: ${db.theme.colors.primary};
     color: #fff;
     padding: 12px 10px;
     font-size: 16px;
     font-weight: bold;
 
     &:hover {
-        background-color: #0f0d0b;
+        background-color: rgb(213, 58, 35, .5);
     }
 `
 

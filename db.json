@@ -7,9 +7,63 @@
     "questions": [
       {
         "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
-        "description": "Essa é pra aquecer",
+        "title": "Porque Itachi Uchiha foi considerado um criminoso?",
+        "answer": 0,
+        "alternatives": [
+          "Por ter assassinado todos do seu clã",
+          "Por ter assassinado alguém importante da aldeia",
+          "Por ter assassinado seu clã inteiro, menos o seu irmão",
+          "Por ter roubado algo valioso e fugido"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
+        "title": "Qual a maneira correta de escrever o nome de Itachi Uchiha em Japonês?",
+        "answer": 1,
+        "alternatives": [
+           "うちはイタチ",
+           "イタチうちは",
+           "イタチ",
+           "うちは"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
+        "title": "Itachi consegue realizar dois jutsus ao mesmo tempo?",
         "answer": 2,
+        "alternatives": [
+          "Sim, pois ele é muito habilidoso",
+          "Não, pois não é possível realizar dois jutsus de uma só vez",
+          "Sim, pois ele é um dos únicos capaz de realizar selos de mão com apenas uma mão",
+          "Não, pois para a realização de um jutsu é necessário as duas mãos"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
+        "title": "Quais as últimas palavras de Itachi antes de morrer?",
+        "answer": 3,
+        "alternatives": [
+          "Perdoe-me Sasuke",
+          "Obrigado Sasuke",
+          "Me desculpa Sasuke, fiz tudo por você",
+          "Perdoe-me Sasuke… …e termina com esta"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
+        "title": "Itachi usou até o Mangekyo Sharingan para conseguir fritar um ovo perfeito?",
+        "answer": 4,
+        "alternatives": [
+          "Não! Isso nunca aconteceu",
+          "Sim! Isso acontece em um filler no anime",
+          "Sim! Isso acontece em uma OVA",
+          "%elemento"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
+        "title": "Como fazer um seletor por id via CSS?",
+        "answer": 5,
         "alternatives": [
           ".elemento",
           "*elemento",
@@ -18,13 +72,50 @@
         ]
       },
       {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "Como fazer um background gradiente com css?",
-        "description": "Faz tempo em haha",
-        "answer": 0,
+        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
+        "title": "Como fazer um seletor por id via CSS?",
+        "answer": 6,
         "alternatives": [
-           "background: linear-gradient(#e66465, #9198e5);",
-           "background: gradient(#e66465, #9198e5);"
+          ".elemento",
+          "*elemento",
+          "#elemento",
+          "%elemento"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
+        "title": "Como fazer um seletor por id via CSS?",
+        "answer": 7,
+        "alternatives": [
+          ".elemento",
+          "*elemento",
+          "#elemento",
+          "%elemento"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
+        "title": "Como fazer um seletor por id via CSS?",
+        "answer": 8,
+        "alternatives": [
+          ".elemento",
+          "*elemento",
+          "#elemento",
+          "%elemento",
+          "%elemento"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
+        "title": "Como fazer um seletor por id via CSS?",
+        "answer": 9,
+        "alternatives": [
+          ".elemento",
+          "*elemento",
+          "#elemento",
+          "%elemento",
+          "%elemento"
+
         ]
       }
     ],

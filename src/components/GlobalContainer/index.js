@@ -8,6 +8,7 @@ const GlobalContainer = styled.div`
     height: 100vh;
     max-width: 500px;
     padding: 40px;
+    overflow: hidden;
 
     background-color: rgba(255, 255, 255, .1);
     box-shadow: 20px 20px 50px rgba(0, 0, 0, .8);
