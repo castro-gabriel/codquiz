@@ -1,6 +1,7 @@
 
 {
     "bg": "/images/bg.png",
+    "ogimg": "/images/ogimg.png",
     "logo": "/images/logo.svg",
     "title": "ItachiQUIZ",
     "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
