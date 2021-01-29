@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 const QuizContainer = styled.div`
   width: 100%;
-  max-width: 700px;
   margin: auto;
 
   @media screen and (max-width: 500px){

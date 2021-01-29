@@ -40,7 +40,7 @@ Widget.Header = styled.header`
   justify-content: center;
   align-items: center;
   padding: 28px 52px;
-  background-color: ${({theme}) => theme.colors.secondary};
+  background-color: ${({theme}) => theme.colors.darkOpacity};
 
   * {
     margin: 0;
@@ -51,7 +51,7 @@ Widget.Topic = styled.a`
   outline: 0;
   text-decoration: none;
   color: ${({theme}) => theme.colors.contrastText};
-  background-color: ${({theme}) => `${theme.colors.primary}40`};
+  background-color: ${({theme}) => `${theme.colors.primary}60`};
   padding: 10px 15px;
   margin-bottom: 8px;
   border-radius: ${({theme}) => theme.borderRadius};

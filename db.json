@@ -1,7 +1,7 @@
 
 {
-    "bg": "/images/bg.png",
-    "logo": "/images/codLogo.png",
+    "bg": "/images/bg.jpg",
+    "logo": "/images/logo.svg",
     "title": "ItachiQUIZ",
     "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
     "questions": [
@@ -33,14 +33,14 @@
     ],
     "theme": {
       "colors": {
-        "primary": "#DD2101",
-        "secondary": "#DD2101",
+        "primary": "#D53A23",
+        "secondary": "#F0F2F3",
         "mainBg": "#171B35",
         "contrastText": "#FFFFFF",
         "wrong": "#FF5722",
         "success": "#4CAF50",
-        "darkColor": "#1C1814",
-        "darkOpacity": "rgba(0, 0, 0, .4)"
+        "darkColor": "#15140F",
+        "darkOpacity": "rgba(0, 0, 0, .5)"
       },
       "borderRadius": "4px"
     }

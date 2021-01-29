@@ -12,6 +12,7 @@ import QuizBackground from '../src/components/QuizBackground'
 import QuizContainer from '../src/components/QuizContainer'
 import Button from '../src/components/Button'
 import Input from '../src/components/Input'
+import QuizLogo from '../src/components/QuizLogo'
 
 
 export default function Home() {
@@ -26,12 +27,8 @@ export default function Home() {
       </Head>
       <GlobalContainer>
         <QuizContainer>
-          {/* <QuizLogo src={db.logo} alt="CodQUIZ"/> */}
+          <QuizLogo />
           <Widget>
-
-            <Widget.Header>
-              <h1>Itachi Uchiha</h1>
-            </Widget.Header>
             
             <Widget.Content>
             <form onSubmit={( event ) => {
