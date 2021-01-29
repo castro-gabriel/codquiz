@@ -6,7 +6,7 @@ const FooterWrapper = styled.footer`
   padding: 20px;
   display: flex;
   align-items: center;
-  margin-top: 8px;
+  margin-top: 28px;
   border-radius: 8px; 
   img {
     width: 58px;

@@ -9,6 +9,7 @@ const ButtonBase = styled.button`
     background-color: ${db.theme.colors.primary};
     color: #fff;
     padding: 12px 10px;
+    margin-bottom: 5px;
     font-size: 16px;
     font-weight: bold;
 

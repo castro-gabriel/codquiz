@@ -5,7 +5,7 @@ const Widget = styled.div`
   background-color: ${({ theme }) => theme.colors.darkOpacity};
   border-radius: 8px;
   padding: 20px;
-  overflow: hidden;
+  /* overflow: hidden; */
   
   h1, h2, h3 {
     font-size: 16px;
@@ -22,7 +22,7 @@ const Widget = styled.div`
 `
 
 Widget.Content = styled.div`
-  padding: 24px 32px 32px 32px;
+  padding: 24px 32px 0px 32px;
   text-align: center; 
   & > *:first-child {
     margin-top: 0%;
