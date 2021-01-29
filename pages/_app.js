@@ -33,7 +33,7 @@ export default function App({ Component, pageProps }) {
       <Head>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
-        <meta property="og:image" content="%PUBLIC_URL%/images/bg.png" />
+        <meta property="og:image" content="%PUBLIC_URL%/images/bg.png" key="og:image"/>
       </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
