@@ -7,6 +7,7 @@ import GitHubCorner from '../src/components/GitHubCorner'
 import QuizBackground from '../src/components/QuizBackground'
 import QuizContainer from '../src/components/QuizContainer'
 import Button from '../src/components/Button'
+import AlternativesForm from '../src/components/AlternativesForm'
 
 function ResultWidget({ results }) {
     return (
@@ -67,7 +68,7 @@ function QuestionWidget({ question, questionIndex, totalQuestions, onSubmit, add
                         <h2>{question.title}</h2>
                         <p>{question.description}</p>
                         
-                        <form onSubmit={(event) => {
+                        <AlternativesForm onSubmit={(event) => {
                             event.preventDefault()
                             setIsQuestionSubmited(true)
                             setTimeout(() => {
@@ -79,14 +80,19 @@ function QuestionWidget({ question, questionIndex, totalQuestions, onSubmit, add
                         }}>
                             {question.alternatives.map( (alternative, alternativeIndex) => {
                                 const alternativeId = `alternative__${alternativeIndex}`
-                                
+                                const alternativeStatus = isCorrect ? 'SUCCESS' : 'ERROR'
+                                const isSelected = selectedAlternative === alternativeIndex
+
                                 return (
                                     <Widget.Topic 
                                         key={alternativeId} 
                                         htmlFor={alternativeId} 
                                         as="label"
+                                        data-selected={isSelected}
+                                        data-status={isQuestionSubmited && alternativeStatus}
                                     >
                                         <input 
+                                            style={{ display: 'none' }}
                                             onChange={() => setSelectedAlternative(alternativeIndex)}
                                             type="radio" 
                                             name={questionId}
@@ -98,9 +104,9 @@ function QuestionWidget({ question, questionIndex, totalQuestions, onSubmit, add
                             })}
 
                         <Button type="submit" disabled={!hasAlternativeSelected}>Confirmar</Button>      
-                        {isQuestionSubmited && isCorrect && <p>Você ACERTOU essa!</p>}
-                        {isQuestionSubmited && !isCorrect && <p>Você ERROU essa!</p>}
-                        </form>
+                        {/* {isQuestionSubmited && isCorrect && <p>Você ACERTOU essa!</p>}
+                        {isQuestionSubmited && !isCorrect && <p>Você ERROU essa!</p>} */}
+                        </AlternativesForm>
 
                     </Widget.Content>
                 </Widget>

@@ -126,6 +126,7 @@
     "theme": {
       "colors": {
         "primary": "#FEE700",
+        "primaryOpacity": "rgb(254, 231, 0, .5)",
         "secondary": "#7C8D3B ",
         "mainBg": "#171B35",
         "contrastText": "#FFFFFF",

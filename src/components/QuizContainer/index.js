@@ -9,7 +9,7 @@ const QuizContainer = styled.div`
 
   border-radius: 4px;
   font-size: 15px;
-  background-color: ${({theme}) => theme.colors.primaryOpacity};
+  background-color: transparent;
 
   @media screen and (max-width: 600px){
     margin: auto;
