@@ -155,7 +155,7 @@ const QuizPage = () => {
                     { screenState === screenStates.LOADING && <LoadingWidget />}
                     { screenState === screenStates.RESULT && <ResultWidget results={results}/>}
                 </QuizContainer>
-                <GitHubCorner projectUrl="https://github.com/castro-gabriel/itachiquiz" />
+                <GitHubCorner projectUrl="https://github.com/castro-gabriel/martialarts_quiz" />
         </QuizBackground>
     )
 }
