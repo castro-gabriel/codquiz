@@ -1,16 +1,22 @@
 import React from 'react'
 import styled from 'styled-components'
-// import PropTypes from 'prop-types'
+import db from '../../../db.json'
 
 const InputBase = styled.input`
     width: 100%;
-    border: none;
-    border-radius: 5px;
-    background-color: rgba(0, 0, 0, .8);
+    border: .1px solid #6b6b6b;
+    border-radius: 4px;
+    background-color: ${({ theme }) => theme.colors.darkOpacity};
     color: #fff;
-    padding: 7px 10px;
+    padding: 12px 10px;
     font-size: 15px;
     margin-bottom: 10px;
+
+    &:focus {
+        outline: none;
+        border: .1px solid #6b6b6b;
+        border-radius: 4px;
+    }
 `
 
 const Input = ({ onChange, placeholder, ...props }) => {

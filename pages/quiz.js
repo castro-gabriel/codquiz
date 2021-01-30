@@ -2,13 +2,41 @@ import React from 'react'
 import db from '../db.json'
 
 // Components
-import GlobalContainer from '../src/components/GlobalContainer'
 import Widget from '../src/components/Widget'
 import GitHubCorner from '../src/components/GitHubCorner'
 import QuizBackground from '../src/components/QuizBackground'
 import QuizContainer from '../src/components/QuizContainer'
-import QuizLogo from '../src/components/QuizLogo'
 import Button from '../src/components/Button'
+
+function ResultWidget({ results }) {
+    return (
+        <Widget>
+            <Widget.Header>Resultado</Widget.Header>
+            <Widget.Content>
+                <p>
+                    Voce acertou
+                    {' '}
+                    {/* {results.reduce((somatoriaAtual, resultAtual) => {
+                        const isAcerto = resultAtual === true
+                        if(isAcerto) {
+                            return somatoriaAtual + 1
+                        }
+                        return somatoriaAtual
+                    }, 0)} */}
+                    {results.filter((x) => x).length}
+                    {' '}
+                    perguntas
+                </p>
+
+                <ul>
+                    {results.map((result, index) => (
+                        <li>#{index + 1} {' '} Resultado: {result == true ? 'Acertou' : 'Errou'}</li>
+                    ))}
+                </ul>
+            </Widget.Content>
+        </Widget>
+    )
+}
 
 function LoadingWidget() {
     return (
@@ -19,7 +47,7 @@ function LoadingWidget() {
     )
 }
 
-function QuestionWidget({ question, questionIndex, totalQuestions, onSubmit }) {
+function QuestionWidget({ question, questionIndex, totalQuestions, onSubmit, addResult }) {
 
     const questionId = `question__${questionIndex}`
     const [selectedAlternative, setSelectedAlternative] = React.useState(undefined)
@@ -28,8 +56,6 @@ function QuestionWidget({ question, questionIndex, totalQuestions, onSubmit }) {
     const hasAlternativeSelected = selectedAlternative !== undefined
 
     return (
-            <QuizContainer>
-                {/* <QuizLogo /> */}
                 <Widget>
                     <Widget.Header>
                         <h3>{`Pergunta ${questionIndex + 1} de ${totalQuestions}`}</  h3>
@@ -45,6 +71,7 @@ function QuestionWidget({ question, questionIndex, totalQuestions, onSubmit }) {
                             event.preventDefault()
                             setIsQuestionSubmited(true)
                             setTimeout(() => {
+                                addResult(isCorrect)
                                 onSubmit()
                                 setIsQuestionSubmited(false)
                                 setSelectedAlternative(undefined)
@@ -77,7 +104,6 @@ function QuestionWidget({ question, questionIndex, totalQuestions, onSubmit }) {
 
                     </Widget.Content>
                 </Widget>
-            </QuizContainer>
     )
 }
 
@@ -89,10 +115,15 @@ const screenStates = {
 
 const QuizPage = () => {
     const [screenState, setScreenState] = React.useState(screenStates.LOADING)
+    const [results, setResults] = React.useState([true, false, true])
     const totalQuestions = db.questions.length
     const [currentQuestion, setCurrentQuestion] = React.useState(0)
     const questionIndex = currentQuestion
     const question = db.questions[questionIndex]
+
+    function addResult(result) {
+        setResults([...results, result])
+    }
 
     React.useEffect(() => {
         setTimeout(() => {
@@ -111,7 +142,6 @@ const QuizPage = () => {
 
     return(
         <QuizBackground backgroundImage={db.bg}>
-            {/* <GlobalContainer> */}
                 <QuizContainer>
                     { screenState === screenStates.QUIZ && (
                         <QuestionWidget 
@@ -119,13 +149,13 @@ const QuizPage = () => {
                             questionIndex={questionIndex} 
                             totalQuestions={totalQuestions}
                             onSubmit={handleSubmitQuiz}
+                            addResult={addResult}
                         />
                     )}
                     { screenState === screenStates.LOADING && <LoadingWidget />}
-                    { screenState === screenStates.RESULT && <div>Você acertou X questões. Parabéns!</div>}
+                    { screenState === screenStates.RESULT && <ResultWidget results={results}/>}
                 </QuizContainer>
                 <GitHubCorner projectUrl="https://github.com/castro-gabriel/itachiquiz" />
-            {/* </GlobalContainer> */}
         </QuizBackground>
     )
 }

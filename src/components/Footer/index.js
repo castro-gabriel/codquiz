@@ -1,8 +1,9 @@
 import styled from 'styled-components'
+import db from '../../../db.json'
 
 // src/components/Footer/index.js
 const FooterWrapper = styled.footer`
-  background-color: rgba(221, 33, 1, .7);
+  background-color: ${({theme}) => theme.colors.darkColor};
   padding: 20px;
   display: flex;
   align-items: center;

@@ -3,9 +3,8 @@ import styled from 'styled-components'
 const Widget = styled.div`
   margin-bottom: 10px;
   background-color: ${({ theme }) => theme.colors.darkOpacity};
-  border-radius: 8px;
+  border-radius: 5px;
   padding: 20px;
-  /* overflow: hidden; */
   
   h1, h2, h3 {
     font-size: 16px;
@@ -22,8 +21,9 @@ const Widget = styled.div`
 `
 
 Widget.Content = styled.div`
-  padding: 24px 32px 0px 32px;
-  text-align: center; 
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  text-align: left; 
   & > *:first-child {
     margin-top: 0%;
   }
@@ -41,8 +41,8 @@ Widget.Content = styled.div`
 
 Widget.Header = styled.header`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
   padding: 28px 52px;
   background-color: ${({theme}) => theme.colors.darkOpacity};
 

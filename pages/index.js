@@ -24,11 +24,10 @@ export default function Home() {
     <QuizBackground backgroundImage={db.bg}>
       <Head>
         <title>Itachi QUIZ</title>
+        
         <meta property="og:image" content={db.ogimg}></meta>
       </Head>
-      <GlobalContainer>
         <QuizContainer>
-          <QuizLogo />
           <Widget>
             
             <Widget.Content>
@@ -55,7 +54,6 @@ export default function Home() {
           </Widget>
 
           <Widget>
-            
             <Widget.Content>
               <p>
                 Responda o QUIZ sobre o Itachi Uchiha e vamos ver o que você sabe.<br />
@@ -63,11 +61,19 @@ export default function Home() {
                 Created by <a href="https://www.instagram.com/gabscastro.dev/" target="blank">@gabscastro.dev</a>
               </p>
             </Widget.Content>
-          
-          </Widget>        
+          </Widget>
+          <Widget>
+            <Widget.Content>
+              <h1>Quizes da galera</h1>
+              <ul>
+                <li>First</li>
+                <li>First</li>
+                <li>First</li>
+              </ul>
+            </Widget.Content>
+          </Widget>     
           <Footer />
         </QuizContainer>
-      </GlobalContainer>
       <GitHubCorner projectUrl="https://github.com/castro-gabriel/itachiquiz" />
     </QuizBackground>
   );
