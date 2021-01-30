@@ -7,116 +7,113 @@
     "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
     "questions": [
       {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Porque Itachi Uchiha foi considerado um criminoso?",
-        "answer": 2,
-        "alternatives": [
-          "Por ter assassinado todos do seu clã",
-          "Por ter assassinado alguém importante da aldeia",
-          "Por ter assassinado seu clã inteiro, menos o seu irmão",
-          "Por ter roubado algo valioso e fugido"
-        ]
-      },
-      {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "Qual a maneira correta de escrever o nome de Itachi Uchiha em Japonês?",
-        "answer": 0,
-        "alternatives": [
-           "うちはイタチ",
-           "イタチうちは",
-           "イタチ",
-           "うちは"
-        ]
-      },
-      {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Itachi consegue realizar dois jutsus ao mesmo tempo?",
-        "answer": 2,
-        "alternatives": [
-          "Sim, pois ele é muito habilidoso",
-          "Não, pois não é possível realizar dois jutsus de uma só vez",
-          "Sim, pois ele é um dos únicos capaz de realizar selos de mão com apenas uma mão",
-          "Não, pois para a realização de um jutsu é necessário as duas mãos"
-        ]
-      },
-      {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Quais as últimas palavras de Itachi antes de morrer?",
+        "image": "/images/muaythai.jpg",
+        "title": "Qual o país de origem do Muay Thai?",
         "answer": 3,
         "alternatives": [
-          "Perdoe-me Sasuke",
-          "Obrigado Sasuke",
-          "Me desculpa Sasuke, fiz tudo por você",
-          "Perdoe-me Sasuke… …e termina com esta"
+          "China",
+          "Indonésia",
+          "Malásia",
+          "Tailândia"
         ]
       },
       {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Itachi usou até o Mangekyo Sharingan para conseguir fritar um ovo perfeito?",
+        "image": "/images/karate.jpg",
+        "title": "O que significa KARATE?",
+        "answer": 1,
+        "alternatives": [
+           "Força das mãos",
+           "Mãos vazias",
+           "Poder do punho",
+           "Domínio da mente"
+        ]
+      },
+      {
+        "image": "/images/kravmaga.jpg",
+        "title": "Quais dessas não é uma arte marcial?",
+        "answer": 1,
+        "alternatives": [
+          "Karate",
+          "Krav Maga",
+          "Taekwondo",
+          "Kung Fu"
+        ]
+      },
+      {
+        "image": "/images/jiujitsu.jpg",
+        "title": "Qual arte marcial utiliza estas técnicas de imobilização? (Montada - Cadeado - Joelho na barriga)",
         "answer": 2,
         "alternatives": [
-          "Não! Isso nunca aconteceu",
-          "Sim! Isso acontece em um filler no anime",
-          "Sim! Isso acontece em uma OVA",
-          "%elemento"
+          "Krav Maga",
+          "Kung Fu",
+          "Jiu Jitsu",
+          "Karate"
         ]
       },
       {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
-        "answer": 5,
+        "image": "/images/taekwondo.jpg",
+        "title": "Onde surgiu o Taekwondo?",
+        "answer": 0,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
+          "Coreia do Sul",
+          "China",
+          "Japão",
+          "Tailândia"
         ]
       },
       {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
-        "answer": 6,
+        "image": "/images/brucelee.jpg",
+        "title": "Qual a arte marcial criada por Bruce Lee?",
+        "answer": 2,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
+          "Kung Fu",
+          "Wing Chun",
+          "Jeet Kune Do",
+          "Taekwondo"
         ]
       },
       {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
-        "answer": 7,
+        "image": "/images/kungfu.jpg",
+        "title": "Qual destes atores estabeleceu o Kung Fu no cinema?",
+        "answer": 1,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
+          "Jackie Chan",
+          "Bruce Lee",
+          "Jet Li",
+          "Donnie Yen"
         ]
       },
       {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
-        "answer": 8,
+        "image": "/images/kinlai.jpeg",
+        "title": "O que signifca a saudação tradicional do Kung Fu Chinês?",
+        "answer": 3,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento",
-          "%elemento"
+          "Respeito ao mestre",
+          "Equilibrio entre corpo e a mente",
+          "Lua e Sol representando Yin-Yang",
+          "Sol e Lua representando clareza"
         ]
       },
       {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
-        "answer": 9,
+        "image": "/images/kruang.jpg",
+        "title": "O que ganha quando se gradua em Muay Thai?",
+        "answer": 0,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento",
-          "%elemento"
-
+          "Kruang",
+          "Bandagens",
+          "Estatua de Ong Bak",
+          "Faixa para a cintura"
+        ]
+      },
+      {
+        "image": "/images/jackiechan.jpg",
+        "title": "Qual o nome Chinês de Jackie Chan?",
+        "answer": 0,
+        "alternatives": [
+          "Chan Kong-sang",
+          "Li Xiaolong",
+          "Chan Ming Sang",
+          "Li Lianjie"
         ]
       }
     ],
@@ -128,6 +125,7 @@
         "primary": "#FEE700",
         "primaryOpacity": "rgb(254, 231, 0, .5)",
         "secondary": "#7C8D3B ",
+        "selectedColor": "#ECBB1D",
         "mainBg": "#171B35",
         "contrastText": "#FFFFFF",
         "wrong": "#FF5722",

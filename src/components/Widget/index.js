@@ -37,12 +37,19 @@ Widget.Content = styled.div`
   a {
     color: #fff;
   }
+  p {
+    font-size: 20;
+    font-weight: bold;
+    text-align: center;
+  }
 `
 
 Widget.Header = styled.header`
   display: flex;
-  justify-content: left;
-  align-items: left;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: bold;
   padding: 28px 52px;
   background-color: ${({theme}) => theme.colors.darkOpacity};
 

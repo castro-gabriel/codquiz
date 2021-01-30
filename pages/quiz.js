@@ -29,11 +29,15 @@ function ResultWidget({ results }) {
                     perguntas
                 </p>
 
-                <ul>
+                {/* <ul>
                     {results.map((result, index) => (
                         <li>#{index + 1} {' '} Resultado: {result == true ? 'Acertou' : 'Errou'}</li>
                     ))}
-                </ul>
+                </ul> */}
+
+                <a href="/">
+                    <Button>Voltar para home</Button>
+                </a>
             </Widget.Content>
         </Widget>
     )
@@ -103,9 +107,7 @@ function QuestionWidget({ question, questionIndex, totalQuestions, onSubmit, add
                                 )
                             })}
 
-                        <Button type="submit" disabled={!hasAlternativeSelected}>Confirmar</Button>      
-                        {/* {isQuestionSubmited && isCorrect && <p>Você ACERTOU essa!</p>}
-                        {isQuestionSubmited && !isCorrect && <p>Você ERROU essa!</p>} */}
+                        <Button type="submit" disabled={!hasAlternativeSelected}>Confirmar</Button>
                         </AlternativesForm>
 
                     </Widget.Content>
@@ -121,7 +123,7 @@ const screenStates = {
 
 const QuizPage = () => {
     const [screenState, setScreenState] = React.useState(screenStates.LOADING)
-    const [results, setResults] = React.useState([true, false, true])
+    const [results, setResults] = React.useState([])
     const totalQuestions = db.questions.length
     const [currentQuestion, setCurrentQuestion] = React.useState(0)
     const questionIndex = currentQuestion
