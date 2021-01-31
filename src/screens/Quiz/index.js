@@ -9,45 +9,12 @@ import QuizContainer from '../../components/QuizContainer'
 import Button from '../../components/Button'
 import AlternativesForm from '../../components/AlternativesForm'
 import styled from 'styled-components'
+import { useRouter } from 'next/router'
 import BackLinkArrow from '../../components/BackLinkArrow'
 
 
-const Loader = styled.div`
-.loader {
-	display: inline-block;
-	position: relative;
-	width: 64px;
-	height: 64px;
-
-	&-container {
-		display: flex;
-		align-items: center;
-		flex-direction: column;
-		justify-content: center;
-
-		span {
-			color: #333;
-			margin-bottom: 50px;
-		}
-	}
-
-	div {
-		position: absolute;
-		border: 4px solid #333;
-		opacity: 1;
-		border-radius: 50%;
-		animation: loader 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-
-		&:nth-child(2) {
-			animation-delay: -0.5s;
-		}
-	}
-}
-`
-
 function ResultWidget({ results }) {
-    // const router = useRouter()
-    // const name = router.query    
+    const router = useRouter()
 
     return (
         <Widget>
@@ -75,7 +42,15 @@ function ResultWidget({ results }) {
                 </ul> */}
 
                 {/* <a href="/"> */}
-                <Button type="submit" onClick={() => {router.back()}}>Voltar para home</Button>
+                <Button 
+                    type="submit" 
+                    onClick={
+                        function backHome(infoEvent) {
+                            infoEvent.preventDefault();
+                            router.push(`/`);
+                        }
+                    }
+                >Voltar para home</Button>
                 {/* </a> */}
 
             </Widget.Content>

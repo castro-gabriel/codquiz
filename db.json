@@ -119,8 +119,9 @@
       }
     ],
     "external": [
-      "https://aluraquiz-css.omariosouto.vercel.app/",
-      "https://aluraquiz-marvel.omariosouto.vercel.app"
+      "https://tw3-quiz.lucas98fernando.vercel.app",
+      "https://aluraquiz-marvel.omariosouto.vercel.app",
+      "https://aluraquiz-base.marlliton.vercel.app"
     ],
     "theme": {
       "colors": {

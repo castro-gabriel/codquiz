@@ -9,45 +9,12 @@ import QuizContainer from '../../src/components/QuizContainer'
 // import QuizLogo from '../src/components/QuizLogo'
 import Button from '../../src/components/Button'
 import AlternativesForm from '../../src/components/AlternativesForm'
-// import { useRouter } from 'next/router'
+import { useRouter } from 'next/router'
 import styled from 'styled-components'
-
-
-const Loader = styled.div`
-.loader {
-	display: inline-block;
-	position: relative;
-	width: 64px;
-	height: 64px;
-
-	&-container {
-		display: flex;
-		align-items: center;
-		flex-direction: column;
-		justify-content: center;
-
-		span {
-			color: #333;
-			margin-bottom: 50px;
-		}
-	}
-
-	div {
-		position: absolute;
-		border: 4px solid #333;
-		opacity: 1;
-		border-radius: 50%;
-		animation: loader 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-
-		&:nth-child(2) {
-			animation-delay: -0.5s;
-		}
-	}
-}
-`
+import BackLinkArrow from '../../src/components/BackLinkArrow'
 
 function ResultWidget({ results }) {
-    // const router = useRouter()
+    const router = useRouter()
     // const name = router.query    
 
     return (
@@ -76,7 +43,15 @@ function ResultWidget({ results }) {
                 </ul> */}
 
                 {/* <a href="/"> */}
-                <Button type="submit" onClick={() => {router.back()}}>Voltar para home</Button>
+                <Button 
+                    type="submit" 
+                    onClick={
+                        function backHome(infoEvent) {
+                            infoEvent.preventDefault();
+                            router.push(`/`);
+                        }
+                    }
+                >Voltar para home</Button>
                 {/* </a> */}
 
             </Widget.Content>
@@ -106,6 +81,7 @@ function QuestionWidget({ question, questionIndex, totalQuestions, onSubmit, add
     return (
                 <Widget>
                     <Widget.Header>
+                        <BackLinkArrow href="/" />
                         <h3>{`Pergunta ${questionIndex + 1} de ${totalQuestions}`}</  h3>
                     </Widget.Header>
 

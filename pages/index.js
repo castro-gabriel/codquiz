@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import db from '../db.json'
 import Head from 'next/head'
+import { motion } from 'framer-motion'
 import { useRouter } from 'next/router'
 
 // Components
@@ -28,7 +29,16 @@ export default function Home() {
         <meta property="og:image" content={db.ogimg}></meta>
       </Head>
         <QuizContainer>
-          <Widget>
+          <Widget
+            as={motion.section}
+            transition={{ delay: 0, duration: 0.5}}
+            variants={{
+              show: { opacity: 1, y: '0' },
+              hidden: { opacity: 0, y: '100%' }
+            }}
+            initial="hidden"
+            animate="show"
+          >
             
             <Widget.Content>
             <form onSubmit={( event ) => {
@@ -54,8 +64,17 @@ export default function Home() {
           
           </Widget>
 
-          <Widget>
-            <Widget.Content>
+          <Widget
+            as={motion.section}
+            transition={{ delay: 0.2, duration: 0.5}}
+            variants={{
+              show: { opacity: 1, y: '0' },
+              hidden: { opacity: 0, y: '100%' }
+            }}
+            initial="hidden"
+            animate="show"
+          >
+            <Widget.Content >
               <p>
                 Responda o QUIZ sobre o Itachi Uchiha e vamos ver o que você sabe.<br />
                 <hr />
@@ -63,31 +82,51 @@ export default function Home() {
               </p>
             </Widget.Content>
           </Widget>
-          <Widget>
+          <Widget 
+            as={motion.section}
+            transition={{ delay: 0.4, duration: 0.5}}
+            variants={{
+              show: { opacity: 1, y: '0' },
+              hidden: { opacity: 0, y: '100%' }
+            }}
+            initial="hidden"
+            animate="show"
+          >
             <Widget.Content>
               <h1>Quizes da galera</h1>
 
-              {db.external.map((linkExterno) => {
-                const [projectName, githubUser] = linkExterno
-                  .replace(/\//g, '')
-                  .replace('https:', '')
-                  .replace('.vercel.app', '')
-                  .split('.')
+              <ul>
+                {db.external.map((linkExterno) => {
+                  const [projectName, githubUser] = linkExterno
+                    .replace(/\//g, '')
+                    .replace('https:', '')
+                    .replace('.vercel.app', '')
+                    .split('.');
 
-                return (
-                  <li key={linkExterno}>
-                    <Widget.Topic 
-                      as={Link}
-                      href={`/quiz/${projectName}___${githubUser}`}
-                    >
-                      {`${githubUser}/${projectName}`}
-                    </Widget.Topic>
-                  </li>
-                )
-              })}
+                  return (
+                    <li key={linkExterno}>
+                      <Widget.Topic
+                        as={Link}
+                        href={`/quiz/${projectName}___${githubUser}`}
+                      >
+                        {`${githubUser}/${projectName}`}
+                      </Widget.Topic>
+                    </li>
+                  );
+                })}
+              </ul>
             </Widget.Content>
           </Widget>     
-          <Footer />
+          <Footer 
+            as={motion.footer}
+            transition={{ delay: 0.6, duration: 0.5}}
+            variants={{
+              show: { opacity: 1, y: '0' },
+              hidden: { opacity: 0, y: '100%' }
+            }}
+            initial="hidden"
+            animate="show"
+          />
         </QuizContainer>
       <GitHubCorner projectUrl="https://github.com/castro-gabriel/martialarts_quiz" />
     </QuizBackground>
