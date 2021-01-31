@@ -76,7 +76,7 @@ export default function Home() {
           >
             <Widget.Content >
               <p>
-                Responda o QUIZ sobre o Itachi Uchiha e vamos ver o que você sabe.<br />
+                Responda o QUIZ sobre o Artes Marciais e vamos ver o que você sabe.<br />
                 <hr />
                 Created by <a href="https://www.instagram.com/gabscastro.dev/" target="blank">@gabscastro.dev</a>
               </p>
