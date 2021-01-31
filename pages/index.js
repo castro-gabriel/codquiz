@@ -34,6 +34,7 @@ export default function Home() {
             <form onSubmit={( event ) => {
               event.preventDefault() // para não carregar mais (Pesquisar mais sobre)
               router.push(`/quiz?name=${name}`)
+              router.pathname({name})
               console.log('Fazendo submissão por meio do react')}}
               >
                   <Input

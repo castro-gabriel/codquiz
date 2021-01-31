@@ -42,6 +42,10 @@ Widget.Content = styled.div`
     font-weight: bold;
     text-align: center;
   }
+  img {
+    margin: auto;
+    display: block;
+  }
 `
 
 Widget.Header = styled.header`
