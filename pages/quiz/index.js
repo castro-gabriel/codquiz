@@ -1,14 +1,14 @@
 import React from 'react'
-import db from '../db.json'
+import db from '../../db.json'
 
 // Components
-import Widget from '../src/components/Widget'
-import GitHubCorner from '../src/components/GitHubCorner'
-import QuizBackground from '../src/components/QuizBackground'
-import QuizContainer from '../src/components/QuizContainer'
+import Widget from '../../src/components/Widget'
+import GitHubCorner from '../../src/components/GitHubCorner'
+import QuizBackground from '../../src/components/QuizBackground'
+import QuizContainer from '../../src/components/QuizContainer'
 // import QuizLogo from '../src/components/QuizLogo'
-import Button from '../src/components/Button'
-import AlternativesForm from '../src/components/AlternativesForm'
+import Button from '../../src/components/Button'
+import AlternativesForm from '../../src/components/AlternativesForm'
 // import { useRouter } from 'next/router'
 import styled from 'styled-components'
 

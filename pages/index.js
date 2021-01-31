@@ -12,7 +12,7 @@ import QuizBackground from '../src/components/QuizBackground'
 import QuizContainer from '../src/components/QuizContainer'
 import Button from '../src/components/Button'
 import Input from '../src/components/Input'
-import QuizLogo from '../src/components/QuizLogo'
+import Link from '../src/components/Link'
 
 
 export default function Home() {
@@ -34,7 +34,7 @@ export default function Home() {
             <form onSubmit={( event ) => {
               event.preventDefault() // para não carregar mais (Pesquisar mais sobre)
               router.push(`/quiz?name=${name}`)
-              router.pathname({name})
+              // router.pathname({name})
               console.log('Fazendo submissão por meio do react')}}
               >
                   <Input
@@ -66,11 +66,25 @@ export default function Home() {
           <Widget>
             <Widget.Content>
               <h1>Quizes da galera</h1>
-              <ul>
-                <li>First</li>
-                <li>First</li>
-                <li>First</li>
-              </ul>
+
+              {db.external.map((linkExterno) => {
+                const [projectName, githubUser] = linkExterno
+                  .replace(/\//g, '')
+                  .replace('https:', '')
+                  .replace('.vercel.app', '')
+                  .split('.')
+
+                return (
+                  <li key={linkExterno}>
+                    <Widget.Topic 
+                      as={Link}
+                      href={`/quiz/${projectName}___${githubUser}`}
+                    >
+                      {`${githubUser}/${projectName}`}
+                    </Widget.Topic>
+                  </li>
+                )
+              })}
             </Widget.Content>
           </Widget>     
           <Footer />
