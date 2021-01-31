@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <QuizBackground backgroundImage={db.bg}>
       <Head>
-        <title>Itachi QUIZ</title>
+        <title>Arte Marcial QUIZ</title>
         
         <meta property="og:image" content={db.ogimg}></meta>
       </Head>
